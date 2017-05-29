@@ -12,7 +12,6 @@ public class Solution {
 
     private static double calcNewtone(double[][] table, double x, int n, double a, double b) {
         double[][] divDif = new double[n + 2][n + 1];
-        double[] cheb = new double[n + 1];
         double result = 0;
         double tmp;
         for (int i = 0; i < n + 1; i++) {
@@ -23,11 +22,6 @@ public class Solution {
         printArr(table[0]);
         System.out.print("Y: ");
         printArr(table[1]);
-        cheb[0] = 1;
-        cheb[1] = x;
-        for (int i = 2; i < n + 1; i++) {
-            cheb[i] = 2 * x * cheb[i - 1] - cheb[i - 2];
-        }
         for (int i = 0; i < n + 1; i++) {
             divDif[0][i] = table[0][i];
             divDif[1][i] = table[1][i];
