@@ -43,7 +43,7 @@ public class Solution {
 
     public static void main(String[] args) {
         double[][] table = new double[2][11];
-        System.out.println("Интерполяционный многочлен Ньютона с многочленами Чебышева:");
+        System.out.println("Интерполяционный многочлен Ньютона с узлами из многочлена Чебышева:");
         System.out.println("r*: " + Math.abs(calcNewtone(table, 0.1 / 3, 10, 0, 1) - calcF(0.1 / 3)));
         System.out.println("r**: " + Math.abs(calcNewtone(table, 0.5 + 0.1 / 3, 10, 0, 1) - calcF(0.5 + 0.1 / 3)));
         System.out.println("r***: " + Math.abs(calcNewtone(table, 1 - 0.1 / 3, 10, 0, 1) - calcF(1 - 0.1 / 3)));
